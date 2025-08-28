@@ -18,17 +18,23 @@ body {
   text-align: center;
 }
 
+/* Logo */
+.logo {
+  width: 150px;   /* adjust size as needed */
+  margin-bottom: 20px;
+}
+
 /* Main heading */
 h1 {
-  font-size: 40px;       /* as requested */
-  color: #f4a300;        /* gold */
+  font-size: 40px;
+  color: #f4a300;  /* gold */
   margin-bottom: 15px;
 }
 
 /* Sub-heading */
 h2 {
-  font-size: 30px;       /* as requested */
-  color: #ddd;           /* light grey */
+  font-size: 30px;
+  color: #ddd;  /* light grey */
   font-weight: normal;
 }
 
