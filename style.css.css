@@ -16,6 +16,8 @@ body {
   align-items: center;
   height: 100vh;  /* full screen height */
   text-align: center;
+  position: relative;
+    top: 20px;  
 }
 
 /* Logo */
