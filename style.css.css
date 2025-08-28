@@ -20,7 +20,7 @@ body {
 
 /* Main heading */
 h1 {
-  font-size: 15em;
+  font-size: 40px;
   color: #f4a300; /* gold accent */
   margin-bottom: 15px;
   letter-spacing: 2px;
@@ -29,7 +29,7 @@ h1 {
 
 /* Sub-heading */
 h2 {
-  font-size: 5em;
+  font-size: 30px;
   color: #ddd; /* light grey/white */
   font-weight: normal;
   text-align: center;
