@@ -9,36 +9,33 @@
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   background-color: #000; /* black background */
-  color: #fff; /* default white text */
+  color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100vh;  /* full screen height */
   text-align: center;
 }
 
 /* Main heading */
 h1 {
-  font-size: 40px;
-  color: #f4a300; /* gold accent */
+  font-size: 40px;       /* as requested */
+  color: #f4a300;        /* gold */
   margin-bottom: 15px;
-  letter-spacing: 2px;
-  text-align: center;
 }
 
 /* Sub-heading */
 h2 {
-  font-size: 30px;
-  color: #ddd; /* light grey/white */
+  font-size: 30px;       /* as requested */
+  color: #ddd;           /* light grey */
   font-weight: normal;
-  text-align: center;
 }
 
 /* Optional tagline */
 p {
   margin-top: 15px;
-  font-size: 1em;
-  color: #f4a300; /* gold text */
+  font-size: 18px;
+  color: #f4a300;
   font-style: italic;
 }
