@@ -8,7 +8,7 @@
 /* Body styling */
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
-  background-color: White; /* black background */
+  background-color: black; /* black background */
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -28,7 +28,7 @@ body {
 
 /* Main heading */
 h1 {
-  font-size: 100px;
+  font-size: 70px;
   color: #f4a300;  /* gold */
   margin-bottom: 15px;
 }
