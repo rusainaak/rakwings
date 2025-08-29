@@ -28,14 +28,14 @@ body {
 
 /* Main heading */
 h1 {
-  font-size: 40px;
+  font-size: 100px;
   color: #f4a300;  /* gold */
   margin-bottom: 15px;
 }
 
 /* Sub-heading */
 h2 {
-  font-size: 30px;
+  font-size: 50px;
   color: #ddd;  /* light grey */
   font-weight: normal;
 }
