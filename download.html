@@ -29,11 +29,16 @@
         font-size: 18px;
         line-height: 1.5;
     }
-    a {
-        color: #f5c16c;
-        text-decoration: underline;
-        font-size: 20px;
+    button {
+        padding: 12px 24px;
+        background: #f5c16c;
+        border: none;
+        border-radius: 8px;
+        color: black;
         font-weight: bold;
+        cursor: pointer;
+        margin-top: 20px;
+        font-size: 18px;
     }
 </style>
 
@@ -44,42 +49,16 @@
     <h2>Thank You For Your Purchase 🎉</h2>
     <h1>Your Ebook Download</h1>
 
-<h2 id="downloadMessage">Loading...</h2>
+    <h2 id="downloadMessage">Loading...</h2>
 
-<button id="downloadBtn" style="display:none;">
-    Download Ebook
-</button>
-
-<script src="script.js"></script>
+    <!-- This button will appear only when the ebook is valid -->
+    <button id="downloadBtn" style="display:none;">
+        Download Ebook
+    </button>
 </div>
 
-<script>
-    // Get ebook number from URL
-    const params = new URLSearchParams(window.location.search);
-    const ebook = params.get("ebook");
-
-    // Validate ebook number (1 to 20)
-    if (ebook >= 1 && ebook <= 20) {
-        const pdfPath = `pdfs/ebook${ebook}.pdf`;
-
-        // manual link
-        document.getElementById("manualLink").href = pdfPath;
-
-        // auto download after 1 second
-        setTimeout(() => {
-            window.location.href = pdfPath;
-        }, 1000);
-    } else {
-        // Invalid ebook number
-        document.body.innerHTML = `
-            <div class="box">
-                <h2>Error</h2>
-                <p>Invalid download link.</p>
-                <a href="index.html">Return Home</a>
-            </div>
-        `;
-    }
-</script>
+<!-- Load your JS file -->
+<script src="script.js"></script>
 
 </body>
 </html>
