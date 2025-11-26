@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Rak Wings Official</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+	<header>
+		<img src="Photos/rakwingslogo.jpg" alt="Logo" class="logo">
+		<div id="header-text">
+			<h1>LEARN BUSINESS</h1>
+			<h1>EARN ONLINE</h1>
+			<h1>GROW FAST</h1>
+		</div>
+	</header>
+
+	<div>
+		<h3 class="sub-header">
+			Helping women and beginners build online income using digital products, courses, and proven systems.
+		</h3>
+
+		<h1 class="sub-header">NO EXPERIENCE REQUIRED, NO FACE NEEDED.</h1>
+
+		<main>
+
+			<section class="photos">
+				<img src="Photos/learnbusiness.jpg" alt="Learn business" />
+				<img src="Photos/earnonline.jpg" alt="Earn online" />
+				<img src="Photos/growfast.jpg" alt="Grow fast" />
+			</section>
+
+			<section class="five">
+				<h1>Ebooks & Guides</h1>
+				<h3>Practical guides to help you earn online faster.</h3>
+
+				<a href="ebooks.html">
+					<button class="browse-feature">Browse all ebooks</button>
+				</a>
+			</section>
+
+			<!-- FEATURED EBOOKS (3 only) -->
+			<section class="ebook-row">
+
+				<!-- ⭐ EBOOK 1 -->
+				<div class="ebook-card" onclick="document.getElementById('pay1').click()">
+					<img src="Photos/ebook1.jpg" alt="Ebook 1">
+					<span class="ebook-price" onclick="document.getElementById('pay1').click()">₹999</span>
+
+					<form>
+
+						<script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_RkC17L3R5fAe1N" async> </script>
+					</form>
+				</div>
+
+
+				<!-- ⭐ EBOOK 2 -->
+				<div class="ebook-card" onclick="document.getElementById('pay2').click()">
+					<img src="Photos/ebook2.jpg" alt="Ebook 2">
+					<span class="ebook-price" onclick="document.getElementById('pay2').click()">₹1299</span>
+
+					<form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_RkC1AsP5efGEKh" async> </script> </form>
+				</div>
+
+				<!-- ⭐ EBOOK 3 -->
+				<div class="ebook-card" onclick="document.getElementById('pay3').click()">
+					<img src="Photos/ebook3.PNG" alt="Ebook 3">
+					<span class="ebook-price" onclick="document.getElementById('pay3').click()">₹1299</span>
+
+					<form>
+						<script id="pay3" src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_RkEZbe1GORgWNO" async>
+						</script>
+					</form>
+				</div>
+
+			</section>
+
+			<!-- ABOUT SECTION (RESTORED FULLY) -->
+			<section class="intro">
+				<h2>ABOUT Me</h2>
+				<p><b>I'm on a mission to help women earn online — 2 to 3 hours a day.</b></p>
+				<p>Hello! I'm the founder of RakWings, I help women and beginners. create online businesses using digital products, online courses, and stop-by-step systems-without working long hours or showing their face.</p>
+
+				<h2>MY STORY</h2>
+				<p>For past few years, I have tried every online platforms, but none of them worked. I followed every strategies that seemed to work for everyone except me. I failed over and over again. And that's when it finally hit me-random methods don't work, a real system does.
+					So I decided to start an online business. But with no clear plan, I quickly felt overwhelmed and discouraged. After months of trial and error. I discovered the power of selling digital products. I learned how to leverage online systems to earn passive income and achieve my goals.</p>
+
+				<h2>WHY RAKWINGS?</h2>
+				<p>I created RakWings to share the strategies and lessons | learned with other women who want to succeed online. My mission is to empower you with the knowledge and tools to become financially independent, gain confidence, and grow your business-without burnout or overwhelm.</p>
+
+				<h2>Let's start your journey to online income today.</h2>
+			</section>
+
+			<section class="border">
+
+				<fieldset>
+					<h1>CONTACT US</h1>
+					Name: <input type="text" name="name"><br>
+					Email: <input type="email" name="email"><br>
+					Message: <input type="text" name="message"><br>
+					<input type="submit" value="Send Message">
+				</fieldset>
+
+				<fieldset class="get-in-touch-box">
+					<h1>GET IN TOUCH</h1>
+
+					<br />
+
+					<p>Email: <a href="mailto:theraksofficial@gmail.com">theraksofficial@gmail.com</a></p>
+
+					<br />
+
+					<p>Instagram: <a href="https://www.instagram.com/rakwings">@rakwings</a></p>
+
+					<br />
+
+					<p>YouTube: <a href="https://youtube.com/@rakwings">@rakwings</a></p>
+				</fieldset>
+
+			</section>
+
+		</main>
+		<br />
+		<br />
+		<br />
+		<footer>
+			<h1>RakWings</h1>
+			<p>© 2024 rakwings, all rights reserved.
+				<a href="privacy.html">Privacy Policy</a> |
+				<a href="terms.html">Terms and conditions</a>
+			</p>
+		</footer>
+
+		<script>
+			function pay(id) {
+				document.querySelector(`#${id} script`).dispatchEvent(new Event("click"));
+			}
+		</script>
+</body>
+
+</html>

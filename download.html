@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Your Ebook Download</title>
+
+<style>
+    body {
+        background: #000;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 50px 20px;
+    }
+    .box {
+        border: 3px solid #f5c16c;
+        padding: 30px;
+        border-radius: 12px;
+        width: 90%;
+        max-width: 480px;
+        margin: auto;
+    }
+    h1, h2 {
+        margin-bottom: 10px;
+        color: #f5c16c;
+    }
+    p {
+        color: #ccc;
+        font-size: 18px;
+        line-height: 1.5;
+    }
+    a {
+        color: #f5c16c;
+        text-decoration: underline;
+        font-size: 20px;
+        font-weight: bold;
+    }
+</style>
+
+</head>
+<body>
+
+<div class="box">
+    <h2>Thank You For Your Purchase 🎉</h2>
+    <p>Your download will begin automatically.</p>
+    <p>If it doesn't, tap below:</p>
+    <a id="manualLink" href="#" download>Download Ebook</a>
+</div>
+
+<script>
+    // Get ebook number from URL
+    const params = new URLSearchParams(window.location.search);
+    const ebook = params.get("ebook");
+
+    // Validate ebook number (1 to 20)
+    if (ebook >= 1 && ebook <= 20) {
+        const pdfPath = `pdfs/ebook${ebook}.pdf`;
+
+        // manual link
+        document.getElementById("manualLink").href = pdfPath;
+
+        // auto download after 1 second
+        setTimeout(() => {
+            window.location.href = pdfPath;
+        }, 1000);
+    } else {
+        // Invalid ebook number
+        document.body.innerHTML = `
+            <div class="box">
+                <h2>Error</h2>
+                <p>Invalid download link.</p>
+                <a href="index.html">Return Home</a>
+            </div>
+        `;
+    }
+</script>
+
+</body>
+</html>

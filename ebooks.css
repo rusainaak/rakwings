@@ -1,0 +1,72 @@
+/* Page Background */
+body {
+    background: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Page Titles */
+.page-title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.page-subtitle {
+    font-size: 14px;
+    color: #bbb;
+    margin-bottom: 25px;
+}
+
+/* Grid Layout — 2 per row */
+.ebooks-grid {
+    width: 92%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+/* Ebook Card Design */
+.ebook-card {
+    background: #000;
+    border: 2px solid #b68d2c;
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.ebook-card:hover {
+    transform: scale(1.02);
+}
+
+/* Bigger Images */
+.ebook-card img {
+    width: 95%;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* Price Text */
+.ebook-price {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #fff;
+}
+
+/* Razorpay button fix (make it small like homepage) */
+form button {
+    width: 90% !important;
+    margin: auto;
+    border-radius: 6px !important;
+}
+
+/* Reduce spacing below */
+form {
+    margin-bottom: 5px;
+}
