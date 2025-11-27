@@ -30,15 +30,14 @@
         line-height: 1.5;
     }
     button {
-        padding: 12px 24px;
-        background: #f5c16c;
+        background-color: #f5c16c;
+        color: #000;
+        padding: 12px 25px;
         border: none;
         border-radius: 8px;
-        color: black;
-        font-weight: bold;
+        font-size: 18px;
         cursor: pointer;
         margin-top: 20px;
-        font-size: 18px;
     }
 </style>
 
@@ -49,16 +48,60 @@
     <h2>Thank You For Your Purchase 🎉</h2>
     <h1>Your Ebook Download</h1>
 
+    <!-- This text changes -->
     <h2 id="downloadMessage">Loading...</h2>
 
-    <!-- This button will appear only when the ebook is valid -->
-    <button id="downloadBtn" style="display:none;">
-        Download Ebook
-    </button>
+    <!-- THIS BUTTON MUST EXIST -->
+    <button id="downloadBtn" style="display:none;">Download Ebook</button>
 </div>
 
-<!-- Load your JS file -->
-<script src="script.js"></script>
+<script>
+    const files = {
+        ebook1: "pdfs/ebook1.pdf",
+        ebook2: "pdfs/ebook2.pdf",
+        ebook3: "pdfs/ebook3.pdf",
+        ebook4: "pdfs/ebook4.pdf",
+        ebook5: "pdfs/ebook5.pdf",
+        ebook6: "pdfs/ebook6.pdf",
+        ebook7: "pdfs/ebook7.pdf",
+        ebook8: "pdfs/ebook8.pdf",
+        ebook9: "pdfs/ebook9.pdf",
+        ebook10: "pdfs/ebook10.pdf",
+        ebook11: "pdfs/ebook11.pdf",
+        ebook12: "pdfs/ebook12.pdf",
+        ebook13: "pdfs/ebook13.pdf",
+        ebook14: "pdfs/ebook14.pdf",
+        ebook15: "pdfs/ebook15.pdf",
+        ebook16: "pdfs/ebook16.pdf",
+        ebook17: "pdfs/ebook17.pdf",
+        ebook18: "pdfs/ebook18.pdf",
+        ebook19: "pdfs/ebook19.pdf",
+        ebook20: "pdfs/ebook20.pdf"
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const ebook = params.get("file");
+
+    const messageBox = document.getElementById("downloadMessage");
+    const downloadBtn = document.getElementById("downloadBtn");
+
+    if (!ebook || !files[ebook]) {
+        messageBox.innerHTML = "⚠️ Invalid download link.";
+        downloadBtn.style.display = "none";
+    } else {
+        messageBox.innerHTML = "Your ebook is ready to download!";
+        downloadBtn.style.display = "block";
+
+        downloadBtn.addEventListener("click", () => {
+            window.location.href = files[ebook];
+        });
+
+        // Auto download after 1 second
+        setTimeout(() => {
+            window.location.href = files[ebook];
+        }, 1000);
+    }
+</script>
 
 </body>
 </html>
